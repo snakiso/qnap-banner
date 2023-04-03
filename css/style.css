@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.page {
+  padding: 120px 0;
+}
+
+.wrapper {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.bg-pos-left {
+  background-position-x: left;
+}
+
+.bg-pos-center {
+  background-position-x: center;
+}
+
+.bg-pos-right {
+  background-position-x: right;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.promotion__title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 55px;
+  color: #757575;
+}
+
+.promotion__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotion__container:hover .col-3 {
+  flex-basis: 23%;
+}
+
+.promotion__container:hover .col-2 {
+  flex-basis: 33%;
+}
+
+.promotion__container:hover .bg-pos-center {
+  background-position-x: 34%;
+}
+
+.promotion__box.col-2:hover {
+  flex-basis: 65% !important;
+}
+
+.promotion__box {
+  min-height: 380px;
+  position: relative;
+  background-image: url(../img/bg.png);
+  background-position-y: bottom;
+}
+
+.promotion__box-bg {
+  transition: background 0.5s;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(93deg, #FFFFFF -4.89%, rgba(255, 255, 255, 0) 131.4%);
+}
+
+.promotion__box.col-1:hover {
+  flex-basis: 100% !important;
+}
+
+.promotion__box:hover {
+  flex-basis: 50% !important;
+}
+
+.promotion__box:hover .promotion__box-bg {
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.promotion__box:hover .promotion__box-title {
+  color: white;
+}
+
+.promotion__box:hover .promotion__box-subtitle {
+  color: white;
+  background-color: red;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  padding: 4px 10px;
+}
+
+.promotion__box:hover .promotion__box-text {
+  color: white;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  max-width: 620px;
+}
+
+.promotion__box:hover .promotion__box-link {
+  color: white;
+  border: 1px solid white;
+}
+
+.promotion__box:hover .promotion__box-link::after,
+.promotion__box:hover .promotion__box-link::before {
+  background: white;
+}
+
+.promotion__box:hover .promotion__box-link:hover {
+  color: rgb(95, 210, 248);
+  border: 1px solid rgb(95, 210, 248);
+}
+
+.promotion__box:hover .promotion__box-link:hover::after,
+.promotion__box:hover .promotion__box-link:hover::before {
+  right: 15px;
+  background: rgb(95, 210, 248);
+}
+
+.promotion__box:hover .promotion__box-link:hover::after {
+  transform: rotate(35deg);
+}
+
+.promotion__box:hover .promotion__box-link:hover::before {
+  transform: rotate(-35deg);
+}
+
+.promotion__box:nth-child(1):hover ~ .bg-pos-center {
+  background-position-x: 67%;
+}
+
+.promotion__box:nth-child(2).col-3:hover {
+  background-position-x: 50% !important;
+}
+
+.promotion__box-title {
+  position: relative;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 25px;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.promotion__box-subtitle {
+  display: block;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FF0707;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  margin-left: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.promotion__box-text {
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
+  color: #757575;
+  padding-left: 25px;
+}
+
+.promotion__box-link {
+  position: absolute;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #757575;
+  text-decoration: none;
+  border: 1px solid #757575;
+  border-radius: 8px;
+  bottom: 25px;
+  left: 25px;
+  padding: 12px 35px 12px 20px;
+  transition: all 0.3s;
+}
+
+.promotion__box-link::after,
+.promotion__box-link::before {
+  position: absolute;
+  content: "";
+  background: #757575;
+  height: 2px;
+  width: 9px;
+  transition: all 0.3s;
+}
+
+.promotion__box-link::after {
+  transform: rotate(25deg);
+  right: 20px;
+  top: 20px;
+}
+
+.promotion__box-link::before {
+  transform: rotate(-25deg);
+  right: 20px;
+  top: 24px;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    max-width: 620px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    max-width: 620px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.col-3 {
+  flex-basis: 31.5%;
+  transition: all 0.3s;
+}
+
+.col-2 {
+  flex-basis: 48%;
+  transition: all 0.3s;
+}
+
+.col-1 {
+  flex-basis: 100%;
+}

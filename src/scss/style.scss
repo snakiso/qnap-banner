@@ -1,0 +1,39 @@
+
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+ font-family: 'Open Sans', sans-serif;
+}
+
+.page{
+ padding: 120px 0;
+}
+
+.wrapper{
+ max-width: 1300px;
+ margin: auto;
+}
+
+.bg-pos-left{
+ background-position-x: left;
+}
+
+.bg-pos-center {
+ background-position-x: center;
+}
+
+.bg-pos-right {
+ background-position-x: right;
+}
+
+h1,
+h2,
+h3 {
+ font-family: 'Roboto', sans-serif;
+}
+
+@import './promotion';
+@import './columns'
