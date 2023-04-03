@@ -33,6 +33,15 @@
   min-height: 380px;
   position: relative;
 
+  &::after {
+   position: absolute;
+   content: '';
+   bottom: 0;
+   height: 5px;
+   width: 100%;
+   background: #FF0707;
+   transition: all .3s;
+  }
  }
 
  &__box-bg {
@@ -50,6 +59,10 @@
 
  &__box:hover {
   flex-basis: 50% !important;
+
+  &::after {
+   opacity: 0;
+  }
 
   .promotion__box-bg {
    transition: all .5s;
