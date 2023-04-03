@@ -54,6 +54,19 @@ h3 {
   flex-basis: 66.6% !important;
 }
 
+.promotion__box:not(:last-child) {
+  margin-right: 20px;
+}
+
+.promotion__box:not(:last-child)::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  background: white;
+  right: -20px;
+}
+
 .promotion__box {
   min-height: 380px;
   position: relative;
