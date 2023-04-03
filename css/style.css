@@ -9,6 +9,7 @@ body {
 
 .page {
   padding: 120px 0;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -62,6 +63,7 @@ h3 {
   position: absolute;
   content: "";
   bottom: 0;
+  left: 0;
   height: 5px;
   width: 100%;
   background: #FF0707;
@@ -333,4 +335,87 @@ h3 {
   bottom: 80px;
   z-index: 1;
   transition: all 0.3s;
+}
+
+.promotion-slider {
+  position: relative;
+  max-width: calc(100% - 60px);
+  margin: auto;
+  margin-top: 60px;
+}
+
+.promotion-slider .swiper-slide {
+  background-image: url(../img/bg.png);
+  background-position: bottom;
+}
+
+.promotion-slider .promotion__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 420px;
+}
+
+.promotion-slider .promotion__box-bg {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.promotion-slider .promotion__box-title {
+  margin-top: 0;
+  padding-left: 0;
+  padding-top: 20px;
+  color: white;
+}
+
+.promotion-slider .promotion__box-text {
+  padding: 0 10px;
+  color: white;
+  max-width: 100%;
+}
+
+.promotion-slider .promotion__box-subtitle {
+  padding: 4px 10px;
+  background: #ff0707;
+  color: white;
+  margin: 10px 0 0 0;
+}
+
+.promotion-slider .promotion__box-link {
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  border: 1px solid white;
+}
+
+.promotion-slider .promotion__box-link::after,
+.promotion-slider .promotion__box-link::before {
+  background: white;
+}
+
+.promotion-slider .promotion__img {
+  position: relative;
+  z-index: 1;
+  transform: scale(0.8);
+  margin-top: 15px;
+}
+
+.promotion-slider::after,
+.promotion-slider::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  border-top: 1px solid red;
+  border-left: 1px solid red;
+}
+
+.promotion-slider::after {
+  right: -15px;
+  transform: rotate(-225deg);
+}
+
+.promotion-slider::before {
+  left: -15px;
+  transform: rotate(-45deg);
 }

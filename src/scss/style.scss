@@ -9,6 +9,7 @@ body {
 
 .page {
  padding: 120px 0;
+ overflow: hidden;
 }
 
 .wrapper {
@@ -28,4 +29,5 @@ h3 {
 }
 
 @import './promotion';
-@import './columns'
+@import './columns';
+@import './slider'
